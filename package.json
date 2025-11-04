@@ -1,0 +1,121 @@
+{
+  "name": "format-my-markdown",
+  "displayName": "Format My Markdown",
+  "publisher": "clydedsouza",
+  "description": "Format selected markdown text with bold, italic, strikethrough, and more from context menu",
+  "version": "0.0.2",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Formatters"
+  ],
+  "activationEvents": [
+    "onLanguage:markdown"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "format-my-markdown.bold",
+        "title": "Format My Markdown: Bold"
+      },
+      {
+        "command": "format-my-markdown.italic",
+        "title": "Format My Markdown: Italic"
+      },
+      {
+        "command": "format-my-markdown.strikethrough",
+        "title": "Format My Markdown: Strikethrough"
+      },
+      {
+        "command": "format-my-markdown.code",
+        "title": "Format My Markdown: Inline Code"
+      },
+      {
+        "command": "format-my-markdown.codeBlock",
+        "title": "Format My Markdown: Code Block"
+      },
+      {
+        "command": "format-my-markdown.link",
+        "title": "Format My Markdown: Link"
+      },
+      {
+        "command": "format-my-markdown.showMenu",
+        "title": "Format My Markdown: Selection"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "format-my-markdown.showMenu",
+        "key": "ctrl+shift+m",
+        "mac": "cmd+shift+m",
+        "when": "editorTextFocus && editorHasSelection && resourceLangId == markdown"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorHasSelection && resourceLangId == markdown",
+          "command": "format-my-markdown.bold",
+          "group": "format-my-markdown@1"
+        },
+        {
+          "when": "editorHasSelection && resourceLangId == markdown",
+          "command": "format-my-markdown.italic",
+          "group": "format-my-markdown@2"
+        },
+        {
+          "when": "editorHasSelection && resourceLangId == markdown",
+          "command": "format-my-markdown.strikethrough",
+          "group": "format-my-markdown@3"
+        },
+        {
+          "when": "editorHasSelection && resourceLangId == markdown",
+          "command": "format-my-markdown.code",
+          "group": "format-my-markdown@4"
+        },
+        {
+          "when": "editorHasSelection && resourceLangId == markdown",
+          "command": "format-my-markdown.codeBlock",
+          "group": "format-my-markdown@5"
+        },
+        {
+          "when": "editorHasSelection && resourceLangId == markdown",
+          "command": "format-my-markdown.link",
+          "group": "format-my-markdown@6"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "check-format": "prettier --check .",
+    "pretest": "npm run lint",
+    "package": "vsce package",
+    "publish": "vsce publish",
+    "build": "npm run format && npm run lint && npm run check-format && vsce package"
+  },
+  "icon": "images/fml-icon.png",
+  "keywords": [
+    "markdown",
+    "format",
+    "bold",
+    "italic",
+    "context-menu"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ClydeDz/format-my-markdown-vscode-ext"
+  },
+  "devDependencies": {
+    "@types/node": "16.x",
+    "@types/vscode": "^1.74.0",
+    "@vscode/vsce": "^3.6.2",
+    "eslint": "^8.26.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.6.2"
+  }
+}

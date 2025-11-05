@@ -3,7 +3,7 @@
   "displayName": "Format My Markdown",
   "publisher": "clydedsouza",
   "description": "Format selected markdown text with bold, italic, strikethrough, and more from context menu",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -103,7 +103,12 @@
     "format",
     "bold",
     "italic",
-    "context-menu"
+    "context-menu",
+    "strikethrough",
+    "code",
+    "code-block",
+    "inline-code",
+    "markdown-formatter"
   ],
   "repository": {
     "type": "git",

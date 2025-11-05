@@ -24,12 +24,16 @@ This extension adds the following formatting options to the context menu when yo
 3. Press `Cmd+Shift+M` (Mac) or `Ctrl+Shift+M` (Windows/Linux)
 4. Choose a formatting option from the menu
 
+[<img src="./images/quickpickmenu.png" width="400"/>](./images/quickpickmenu.png)
+
 ### Context Menu
 
 1. Open a markdown file (`.md`)
 2. Select the text you want to format
 3. Right-click to open the context menu
 4. Choose one of the markdown formatting options
+
+[<img src="./images/contextmenu.png" width="350"/>](./images/contextmenu.png)
 
 ## Extension Settings
 

@@ -1,4 +1,4 @@
-name: Build and publish VS Code extension
+name: Build and publish VSCode extension
 
 on:
   push:
@@ -28,7 +28,7 @@ jobs:
         run: |
           npm run format && npm run lint && npm run check-format
 
-      - name: Publish to VS Code marketplace
+      - name: Publish to VSCode marketplace
         if: |
           success() &&
           github.ref == 'refs/heads/main'

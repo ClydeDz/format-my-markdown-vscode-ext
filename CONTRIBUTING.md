@@ -20,6 +20,8 @@
    npm run package
    ```
 
+   Add items to .vscodeignore file to not include it in the final package.
+
 1. Install the generated `.vsix` file:
    - Open VSCode
    - Go to Extensions view (`Cmd+Shift+X` or `Ctrl+Shift+X`)
@@ -28,6 +30,8 @@
    - Choose the generated `.vsix` file
 
 ## Publishing
+
+Locally, from a computer:
 
 1. Login to VS Marketplace using the publisher ID:
 
@@ -51,11 +55,10 @@
 
    ```bash
    npm run publish
-
    ```
 
 1. Extension should live after a few minutes on [this page](https://marketplace.visualstudio.com/items?itemName=clydedsouza.format-my-markdown).
 
-## License
+Or via GitHub Actions:
 
-MIT
+- Merge the changes to the main branch and GitHub Actions will automatically build and publish the extension.

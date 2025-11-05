@@ -35,24 +35,6 @@ This extension adds the following formatting options to the context menu when yo
 
 This extension does not add any VSCode settings.
 
-## Known Issues
-
-None at this time.
-
-## Release Notes
-
-### 0.0.1
-
-Initial release with basic markdown formatting features:
-
-- Bold, Italic, Strikethrough
-- Inline Code, Code Block
-- Link creation
-
-## License
-
-MIT
-
 ## Credits
 
 Developed by [Clyde D'Souza](https://clydedsouza.net/)

@@ -75,32 +75,32 @@ async function showFormattingMenu() {
     {
       label: "$(bold) Bold",
       description: "Wrap with **text**",
-      command: "markdown-formatter.bold"
+      command: "format-my-markdown.bold"
     },
     {
       label: "$(italic) Italic",
       description: "Wrap with _text_",
-      command: "markdown-formatter.italic"
+      command: "format-my-markdown.italic"
     },
     {
       label: "$(dash) Strikethrough",
       description: "Wrap with ~~text~~",
-      command: "markdown-formatter.strikethrough"
+      command: "format-my-markdown.strikethrough"
     },
     {
       label: "$(code) Inline Code",
       description: "Wrap with `text`",
-      command: "markdown-formatter.code"
+      command: "format-my-markdown.code"
     },
     {
       label: "$(file-code) Code Block",
       description: "Wrap with ```text```",
-      command: "markdown-formatter.codeBlock"
+      command: "format-my-markdown.codeBlock"
     },
     {
       label: "$(link) Link",
       description: "Create markdown link",
-      command: "markdown-formatter.link"
+      command: "format-my-markdown.link"
     }
   ];
 
@@ -120,7 +120,7 @@ function activate(context) {
   console.log("Markdown Formatter extension is now active");
 
   // Register command for bold formatting
-  let boldCommand = vscode.commands.registerCommand("markdown-formatter.bold", () => {
+  let boldCommand = vscode.commands.registerCommand("format-my-markdown.bold", () => {
     const editor = vscode.window.activeTextEditor;
     if (editor) {
       wrapSelection(editor, "**", "**");
@@ -128,7 +128,7 @@ function activate(context) {
   });
 
   // Register command for italic formatting
-  let italicCommand = vscode.commands.registerCommand("markdown-formatter.italic", () => {
+  let italicCommand = vscode.commands.registerCommand("format-my-markdown.italic", () => {
     const editor = vscode.window.activeTextEditor;
     if (editor) {
       wrapSelection(editor, "_", "_");
@@ -137,7 +137,7 @@ function activate(context) {
 
   // Register command for strikethrough formatting
   let strikethroughCommand = vscode.commands.registerCommand(
-    "markdown-formatter.strikethrough",
+    "format-my-markdown.strikethrough",
     () => {
       const editor = vscode.window.activeTextEditor;
       if (editor) {
@@ -147,7 +147,7 @@ function activate(context) {
   );
 
   // Register command for inline code formatting
-  let codeCommand = vscode.commands.registerCommand("markdown-formatter.code", () => {
+  let codeCommand = vscode.commands.registerCommand("format-my-markdown.code", () => {
     const editor = vscode.window.activeTextEditor;
     if (editor) {
       wrapSelection(editor, "`", "`");
@@ -155,7 +155,7 @@ function activate(context) {
   });
 
   // Register command for code block formatting
-  let codeBlockCommand = vscode.commands.registerCommand("markdown-formatter.codeBlock", () => {
+  let codeBlockCommand = vscode.commands.registerCommand("format-my-markdown.codeBlock", () => {
     const editor = vscode.window.activeTextEditor;
     if (editor) {
       wrapSelectionWithNewlines(editor, "```", "```");
@@ -163,7 +163,7 @@ function activate(context) {
   });
 
   // Register command for link formatting
-  let linkCommand = vscode.commands.registerCommand("markdown-formatter.link", () => {
+  let linkCommand = vscode.commands.registerCommand("format-my-markdown.link", () => {
     const editor = vscode.window.activeTextEditor;
     if (editor) {
       createLink(editor);
@@ -171,7 +171,7 @@ function activate(context) {
   });
 
   // Register command for quick pick menu
-  let quickPickCommand = vscode.commands.registerCommand("markdown-formatter.showMenu", () => {
+  let quickPickCommand = vscode.commands.registerCommand("format-my-markdown.showMenu", () => {
     showFormattingMenu();
   });
 
